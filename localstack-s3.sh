@@ -10,8 +10,10 @@ sudo apt install awscli
 '''
 aws configure
 
-aws --endpoint-url=https://localhost s3 mb s3://sync-files
+aws --endpoint-url=http://localhost:4566 s3 mb s3://sync-files
 
-aws --endpoint-url=https://localhost s3 ls
+aws --endpoint-url=http://localhost:4566 s3 ls
+
+aws --endpoint-url=http://localhost:4566 s3 ls s3://sync-files
 '''
 
