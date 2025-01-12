@@ -1,8 +1,9 @@
-docker run --rm -it \
+docker run \
   -e SERVICES=s3 \
   -e LAMBDA_EXECUTOR=docker \
   -e DATA_DIR=/tmp/localstack/data \
   -p 4566:4566 \
+  --restart=always \
   localstack/localstack &
 
 sudo apt install awscli
